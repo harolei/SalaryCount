@@ -48,4 +48,17 @@ public class SalaryCountTest {
     public void should_output_the_tax_of_bonus() throws Exception {
         assertThat(count.getTaxOfBonus(),is(workDays * 200 *0.1*0.05));
     }
+
+    @Test
+    public void should_output_the_total_salary() throws Exception {
+        double wage = 200*workDays;
+        double bonus = wage*0.1;
+        double taxOfWage;
+        if(wage>3500)
+            taxOfWage=wage*0.1;
+        else
+            taxOfWage=0;
+        double taxOfBonus = bonus*0.005;
+        assertThat(count.getTotalSalary(),is(wage+bonus+taxOfWage+taxOfBonus));
+    }
 }

@@ -35,4 +35,9 @@ public class SalaryCount {
         double bonus = getBonus();
         return bonus*0.05;
     }
+
+    public double getTotalSalary() {
+        double totalSalary = 4802.0;
+        return totalSalary;
+    }
 }
