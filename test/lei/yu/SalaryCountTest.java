@@ -55,10 +55,10 @@ public class SalaryCountTest {
         double bonus = wage*0.1;
         double taxOfWage;
         if(wage>3500)
-            taxOfWage=wage*0.1;
+            taxOfWage=(wage-3500)*0.1;
         else
             taxOfWage=0;
-        double taxOfBonus = bonus*0.005;
+        double taxOfBonus = bonus*0.05;
         assertThat(count.getTotalSalary(),is(wage+bonus+taxOfWage+taxOfBonus));
     }
 }

@@ -37,7 +37,11 @@ public class SalaryCount {
     }
 
     public double getTotalSalary() {
-        double totalSalary = 4802.0;
+        double wage = getWage();
+        double bonus = getBonus();
+        double taxOfWage = getTaxOfWage();
+        double taxOfBonus = getTaxOfBonus();
+        double totalSalary = wage + bonus + taxOfWage + taxOfBonus;
         return totalSalary;
     }
 }
